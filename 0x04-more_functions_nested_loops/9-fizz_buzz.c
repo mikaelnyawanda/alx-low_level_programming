@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,8 +7,21 @@
  */
 int main(void)
 {
-    print_square(2);
-    print_square(10);
-    print_square(0);
-    return (0);
+	int n;
+
+	for (n = 1; n <= 100; n++)
+	{
+		if (n % 3 == 0 && n % 5 != 0)
+			printf("Fizz");
+		else if (n % 3 != 0 && n % 5 == 0)
+			printf("Buzz");
+		else if (n % 3 == 0 && n % 5 == 0)
+			printf("FizzBuzz");
+		else
+			printf("%d", n);
+		if (n < 100)
+			printf(" ");
+	}
+	printf("\n");
+	return (0);
 }
