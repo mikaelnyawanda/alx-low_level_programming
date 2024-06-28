@@ -1,14 +1,23 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * print_square - check the code
+ *@size: integer
  * Return: Always 0.
  */
-int main(void)
+void print_square(int size)
 {
-    print_square(2);
-    print_square(10);
-    print_square(0);
-    return (0);
+	int m, b;
+
+	if (size >= 10)
+		_putchar('\n');
+	for (m = 0; m <= size; m++)
+	{
+		for (b = 0; b <= size; b++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n')
+	}
 }
+~
