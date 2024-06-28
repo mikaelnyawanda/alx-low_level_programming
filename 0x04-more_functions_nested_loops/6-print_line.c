@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * print_line - check the code
+ *@n: integer
  * Return: Always 0.
  */
-int main(void)
+void print_line(int n)
 {
-    print_line(0);
-    print_line(2);
-    print_line(10);
-    print_line(-4);
-    return (0);
+	int k;
+
+	for (k = 0; k <= n; k++)
+		_putchar('_');
+	_putchar('\n');
 }
