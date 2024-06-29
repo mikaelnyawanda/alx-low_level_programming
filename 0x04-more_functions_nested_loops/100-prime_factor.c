@@ -1,21 +1,26 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <math.h>
 /**
- * main - check the code
+ * main - find the largest prime factor
  *
- * Return: Always 0.
+ * Return: null (Success)
+ *
  */
+
 int main(void)
 {
-    print_number(98);
-    _putchar('\n');
-    print_number(402);
-    _putchar('\n');
-    print_number(1024);
-    _putchar('\n');
-    print_number(0);
-    _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
-    return (0);
+	long n, j;
+
+	n = 612852475143;
+
+	for (j = 2; n > j; j++)
+	{
+		while (n % j == 0)
+		{
+			n = n / j;
+		}
+	}
+	printf("%lu", n);
+	putchar('\n');
+	return (0);
 }
